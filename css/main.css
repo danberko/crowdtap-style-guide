@@ -1,7 +1,12 @@
-.group:after {
+.clearfix:after {
   content: "";
   display: table;
   clear: both;
+}
+
+#wrapper {
+  width: 900px;
+  margin: 0 auto;
 }
 
 body {
@@ -13,15 +18,6 @@ body {
 
 p {
   line-height: 1.33;
-}
-
-.main.container p.sub {
-  color: #777;
-}
-
-.main.container {
-  width: 1024px;
-  margin: 0 auto;
 }
 
 h1, h2, h3, h4, h5, h6, p {
@@ -47,6 +43,41 @@ h3 {
   margin-bottom: 10px;
 }
 
+.main p.sub {
+  color: #777;
+}
+
+#nav {
+  background: #ebe6dc;
+  border: 1px solid #c1bdb4;
+  border-radius: 3px;
+  box-shadow: 0 1px 0 rgba(255,255,255,0.25);
+  position: fixed;
+  width: 200px;
+}
+
+#nav li {
+  border-bottom: 1px solid #ccc;
+}
+
+#nav a {
+  color: inherit;
+  display: block;
+  padding: 15px 10px;
+  text-decoration: none;
+}
+
+#nav a:hover {
+  background: #e5ddcd;
+  color: #444;
+}
+
+.main {
+  /*float: right;*/
+  margin-left: 300px;
+  width: 600px;
+}
+
 .section .heading-sub {
   color: #777;
   font-weight: bold;
@@ -59,9 +90,8 @@ h3 {
 }
 
 .color-swatch {
-  float: left;
   margin-top: 40px;
-  width: 472px;
+  /*width: 472px;*/
 }
 
 /* :( couldn't use :nth-child() */
@@ -75,7 +105,7 @@ h3 {
 
 .color-swatch .description {
   margin-left: 20px;
-  width: 350px;
+  width: 480px;
 }
 
 .color-swatch .container {
