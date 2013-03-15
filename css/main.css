@@ -228,7 +228,11 @@ p.default-text-gray {
 }
 
 .font-example {
-  padding-top: 40px;
+  background: #f9f9f9;
+  border-radius: 3px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.25);
+  margin-top: 40px;
+  padding: 20px;
 }
 
 .font-example h4 {
@@ -270,4 +274,71 @@ p.default-text-gray {
 
 .thumbnail-container a:last-child {
   margin-right: 0;
+}
+
+.type-pairing {
+  margin-top: 40px;
+}
+
+.type-pairing > div {
+  float: left;
+}
+
+.type-pairing h4 {
+  color: #444;
+  margin-bottom: 10px;
+}
+
+.type-pairing .rokkitt {
+  font-family: Rokkitt, serif;
+  font-size: 30px;
+}
+
+.type-pairing .open-sans {
+  font-family: "Open Sans", sans-serif;
+  font-size: 20px;
+}
+
+.type-pairing .oswald {
+  font-family: "Oswald", sans-serif;
+  font-size: 20px;
+}
+
+.type-pairing .example {
+  background: #fff;
+  border-radius: 3px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.25);
+  margin-bottom: 20px;
+  padding: 20px;
+  width: 100%;
+}
+
+.rokkitt-oswald .example .rokkitt {
+  color: #444;
+  font-size: 16px;
+}
+
+.rokkitt-oswald .example .oswald {
+  color: #444;
+  font-size: 60px;
+}
+
+.rokkitt-oswald .example {
+  text-align: center;
+}
+
+.oswald-open-sans .example .oswald {
+  color: #444;
+  font-size: 17px;
+  text-transform: uppercase;
+}
+
+.oswald-open-sans .example .open-sans {
+  color: #444;
+  font-size: 16px;
+  font-style: italic;
+}
+
+.open-sans-open-sans h4 span:first-child {
+  font-weight: bold;
 }
