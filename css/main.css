@@ -1,19 +1,17 @@
-.clearfix:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-#wrapper {
-  width: 900px;
-  margin: 0 auto;
-}
-
 body {
   background: url('../img/bg.png') repeat;
   color: #777;
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
+}
+
+a {
+  color:#b75a5a;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 p {
@@ -26,9 +24,9 @@ h1, h2, h3, h4, h5, h6, p {
 
 h2 {
   border-bottom: 1px solid #999;
+  color: #444;
   font-family: Oswald, sans-serif;
   font-size: 20px;
-  color: #444;
   margin-top: 60px;
   padding-bottom: 10px;
   text-transform: uppercase;
@@ -39,18 +37,37 @@ h3 {
   color: #444;
   font-family: Rokkitt, serif;
   font-size: 36px;
-  padding-top: 40px;
   margin-bottom: 10px;
+  padding-top: 40px;
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#wrapper {
+  width: 900px;
+  margin: 0 auto;
 }
 
 .main p.sub {
   color: #777;
 }
 
+.main p.note {
+  background: url('../img/pin.png') no-repeat center 3px #ffde6a;
+  box-shadow: 0 3px 5px rgba(0,0,0,0.15);
+  color: #847954;
+  margin-top: 40px;
+  padding: 20px;
+}
+
 #nav {
   background: #ebe6dc;
-  border: 1px solid #c1bdb4;
   border-radius: 3px;
+  border: 1px solid #c1bdb4;
   box-shadow: 0 1px 0 rgba(255,255,255,0.25);
   position: fixed;
   width: 200px;
@@ -58,6 +75,10 @@ h3 {
 
 #nav li {
   border-bottom: 1px solid #ccc;
+}
+
+#nav li:last-child {
+  border-bottom: none;
 }
 
 #nav a {
@@ -72,15 +93,19 @@ h3 {
   color: #444;
 }
 
+#nav a.selected {
+  border-left: 5px solid #b75a5a;
+  color: #444;
+  font-weight: bold;
+}
+
 .main {
-  /*float: right;*/
   margin-left: 300px;
   width: 600px;
 }
 
 .section .heading-sub {
   color: #777;
-  font-weight: bold;
   padding: 0;
 }
 
@@ -91,7 +116,6 @@ h3 {
 
 .color-swatch {
   margin-top: 40px;
-  /*width: 472px;*/
 }
 
 /* :( couldn't use :nth-child() */
@@ -110,8 +134,8 @@ h3 {
 
 .color-swatch .container {
   background: #fff;
-  border: 1px solid #998d78;
   border-radius: 3px;
+  border: 1px solid #998d78;
   box-shadow: 0 1px 3px rgba(0,0,0,0.33);
   padding: 10px;
   width: 75px;
@@ -245,7 +269,7 @@ p.default-text-gray {
   font-family: Rokkitt, serif;
 }
 
-.font-example.open-sans h4 {
+.font-example.source-sans-pro h4 {
   font-family: "Open Sans", serif;
   padding-bottom: 20px;
 }
@@ -286,7 +310,7 @@ p.default-text-gray {
 
 .type-pairing h4 {
   color: #444;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .type-pairing .rokkitt {
@@ -294,7 +318,7 @@ p.default-text-gray {
   font-size: 30px;
 }
 
-.type-pairing .open-sans {
+.type-pairing .source-sans-pro {
   font-family: "Open Sans", sans-serif;
   font-size: 20px;
 }
@@ -308,13 +332,14 @@ p.default-text-gray {
   background: #fff;
   border-radius: 3px;
   box-shadow: 0 1px 3px rgba(0,0,0,0.25);
+  color: #444;
   margin-bottom: 20px;
   padding: 20px;
-  width: 100%;
+  width: 560px;
 }
 
 .rokkitt-oswald .example .rokkitt {
-  color: #444;
+  color: #777;
   font-size: 16px;
 }
 
@@ -327,18 +352,49 @@ p.default-text-gray {
   text-align: center;
 }
 
-.oswald-open-sans .example .oswald {
+.rokkitt-source-sans-pro .example .source-sans-pro {
+  color: #777;
+  font-size: 16px;
+}
+
+.oswald-source-sans-pro .example .oswald {
   color: #444;
   font-size: 17px;
   text-transform: uppercase;
 }
 
-.oswald-open-sans .example .open-sans {
-  color: #444;
+.oswald-source-sans-pro .example .source-sans-pro {
+  color: #777;
   font-size: 16px;
   font-style: italic;
 }
 
-.open-sans-open-sans h4 span:first-child {
+.source-sans-pro-source-sans-pro .example .source-sans-pro:first-child {
+  font-size: 24px;
+}
+
+.source-sans-pro-source-sans-pro .example .source-sans-pro:last-child {
+  color: #777;
+  font-size: 16px;
+}
+
+.source-sans-pro-source-sans-pro h4 span:first-child {
   font-weight: bold;
+}
+
+ul.ct-icons {
+  margin-top: 20px;
+}
+
+ul.ct-icons i[class^="icon-"] {
+  color: #444;
+  font-size: 24px;
+}
+
+ul.ct-icons li {
+  background: #fff;
+  border-radius: 3px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.25);
+  margin-bottom: 10px;
+  padding: 20px;
 }
