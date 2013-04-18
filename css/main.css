@@ -101,6 +101,7 @@ h3 {
 
 .main {
   margin-left: 300px;
+  padding-bottom: 60px;
   width: 600px;
 }
 
@@ -185,6 +186,14 @@ h3 {
   background: #777777;
 }
 
+.color.green {
+  background: #73bf2b;
+}
+
+.color.yellow {
+  background: #c9ab25;
+}
+
 p.blue {
   background: none;
   color: #51b2ca;
@@ -223,6 +232,14 @@ p.white {
 p.default-text-gray {
   background: none;
   color: #777777;
+}
+
+p.green {
+  color: #73bf2b;
+}
+
+p.yellow {
+  color: #c9ab25;
 }
 
 .color-swatch .container p {
