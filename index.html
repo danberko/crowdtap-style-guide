@@ -11,10 +11,36 @@
     <div id="wrapper">
 
       <ul id="nav">
-        <li><a href="#colors">Colors</a></li>
-        <li><a href="#typography">Typography</a></li>
-        <li><a href="#icons">Icons</a></li>
-        <li><a href="#details">Details / Flourishes</a></li>
+        <li>
+          <a href="#colors">Colors</a>
+          <ul>
+            <li><a href="#colors-text">Text</a><li>
+            <li><a href="#colors-action-stages">Action stages</a><li>
+          </ul>
+        </li>
+        <li>
+          <a href="#typography">Typography</a>
+          <ul>
+            <li><a href="#typography-sizes">Sizes</a><li>
+            <li><a href="#typography-pairings">Pairings</a><li>
+          </ul>
+        </li>
+        <li>
+          <a href="#icons">Icons</a>
+          <ul>
+            <li><a href="#icons-global-ui-icons">Global UI Icons</a><li>
+            <li><a href="#icons-brand-page-icons">Brand Page Icons</a><li>
+            <li><a href="#icons-game-icons">Game Icons</a><li>
+            <li><a href="#icons-action-notification-icons">Action Notification Icons</a><li>
+          </ul>
+        </li>
+        <li>
+          <a href="#details">Details / Flourishes</a>
+          <ul>
+            <li><a href=""></a><li>
+            <li><a href=""></a><li>
+          </ul>
+        </li>
       </ul><!-- END .nav -->
 
       <div class="main">
@@ -117,7 +143,7 @@
 
           </div><!-- END .color-swatch -->
 
-          <h3>Text</h3>
+          <h3 id="colors-text">Text</h3>
           <p class="heading-sub">These colors will generally get you where you need to go in most text layout situations. These will work well on a white (or similar) background or on either of our beige textured backgrounds.</p>
 
           <div class="color-swatch clearfix">
@@ -149,7 +175,7 @@
 
           <p class="note">In some situations, text may be set on a background that creates too much/little contrast with the standard text colors (usually #444 will appear too dark on these backgrounds or #777 will not be legible). In these cases, choosing a color that is close to the intended color in value but close to the background color in hue should preserve the contrast and hierarchy.</p>
 
-          <h3>Action stages</h3>
+          <h3 id="colors-action-stages">Action stages</h3>
           <p class="heading-sub"></p>
 
           <div class="color-swatch clearfix">
@@ -243,10 +269,10 @@
 
           </div><!-- END .font-example -->
 
-          <h3>Sizes</h3>
+          <h3 id="typography-sizes">Sizes</h3>
           <p class="heading-sub">The only hard rule for font sizing is copy that is meant to be read at length should not be smaller than 16px. If there is a reason to reduce the font size then 14px is the absolute baseline for body copy in a given area. Small text can be seen in places but these are areas of text that are short (gutter notification copy) or not meant to be read (disclaimer copy).</p>
 
-          <h3>Pairings</h3>
+          <h3 id="typography-pairings">Pairings</h3>
           <p class="heading-sub">Pairing the fonts in our family is an important detail to pay attention to. Good typography will keep the text on pages from feeling like it's all the same and make digesting/reading the page easier.</p>
 
           <div class="type-pairing rokkitt-source-sans-pro clearfix">
@@ -382,14 +408,32 @@
 
     <script>
       $(document).ready(function(){
-          $('#nav').localScroll({
-            offset: -60 // Needs to match top padding on h2 elements
-          });
+        $('#nav').localScroll({
+          offset: -60 // Needs to match top padding on h2 elements
+        });
 
-          $('#nav a').click(function() {
+        // hide nav items on load (gracefully degrades to expanded
+        // menus if JS is disabled)
+        $('#nav li ul').hide();
+
+        $('#nav > li > a').hover(function() {
+          $(this).siblings('ul').slideDown('fast');
+        }, function() {
+          if(!$(this).hasClass('selected')) {
+            $(this).siblings('ul').slideUp('fast');
+          }
+        });
+
+        $('#nav > li > a').click(function() {
+          if(!$(this).hasClass('selected')) {
+            // remove all active styles and states from nav
             $('#nav a').removeClass('selected');
+            $('#nav a').not($(this)).siblings('ul').slideUp('fast');
+
+            // add active styles to currently active element
             $(this).addClass('selected');
-          });
+          }
+        });
       });
     </script>
 
