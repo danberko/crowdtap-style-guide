@@ -12,7 +12,7 @@
 
       <ul id="nav">
         <li>
-          <a href="#colors">Colors</a>
+          <a href="#colors" class="active">Colors</a>
           <ul>
             <li><a href="#colors-text">Text</a><li>
             <li><a href="#colors-action-stages">Action stages</a><li>
@@ -23,6 +23,24 @@
           <ul>
             <li><a href="#typography-sizes">Sizes</a><li>
             <li><a href="#typography-pairings">Pairings</a><li>
+          </ul>
+        </li>
+        <li>
+          <a href="#buttons">Buttons</a>
+          <ul>
+            <li><a href=""></a><li>
+          </ul>
+        </li>
+        <li>
+          <a href="#form-elements">Form Elements</a>
+          <ul>
+            <li><a href=""></a><li>
+          </ul>
+        </li>
+        <li>
+          <a href="#modals">Modals</a>
+          <ul>
+            <li><a href=""></a><li>
           </ul>
         </li>
         <li>
@@ -37,7 +55,6 @@
         <li>
           <a href="#details">Details / Flourishes</a>
           <ul>
-            <li><a href=""></a><li>
             <li><a href=""></a><li>
           </ul>
         </li>
@@ -339,12 +356,39 @@
 
         <div class="section">
 
+          <h2 id="buttons">Buttons</h2>
+
+          <h3>General</h3>
+          <p class="heading-sub"></p>
+
+        </div><!-- END .section -->
+
+        <div class="section">
+
+          <h2 id="form-elements">Form Elements</h2>
+
+          <h3>General</h3>
+          <p class="heading-sub"></p>
+
+        </div><!-- END .section -->
+
+        <div class="section">
+
+          <h2 id="modals">Modals</h2>
+
+          <h3>General</h3>
+          <p class="heading-sub"></p>
+
+        </div><!-- END .section -->
+
+        <div class="section">
+
           <h2 id="icons">Icons</h2>
 
           <h3>General</h3>
           <p class="heading-sub">For icons, we use the <a href="http://fortawesome.github.com/Font-Awesome/" target="_blank">Font Awesome</a> icon library. <a href="http://fortawesome.github.com/Font-Awesome/design.html" target="_blank">This page</a> has all of the characters, their classes, and character codes.</p>
 
-          <h3>Global UI Icons</h3>
+          <h3 id="icons-global-ui-icons">Global UI Icons</h3>
           <p class="heading-sub">Icons used in global site areas&mdash;namely the header bar.</p>
           <ul class="ct-icons">
             <li><i class="icon-th-list"></i> &ndash; Brand dropdown list.</li>
@@ -352,7 +396,7 @@
             <li><i class="icon-bell-alt"></i> &ndash; Alerts dropdown list.</li>
           </ul><!-- END .ct-icons -->
 
-          <h3>Brand Page Icons</h3>
+          <h3 id="icons-brand-page-icons">Brand Page Icons</h3>
           <p class="heading-sub">Icons used on the brand page.</p>
           <ul class="ct-icons">
             <li><i class="icon-camera"></i> &ndash; Photo challenge action.</li>
@@ -361,7 +405,7 @@
             <li><i class="icon-link"></i> &ndash; Web share action.</li>
           </ul><!-- END .ct-icons -->
 
-          <h3>Game Icons</h3>
+          <h3 id="icons-game-icons">Game Icons</h3>
           <p class="heading-sub">Icons used as part of the game system.</p>
           <ul class="ct-icons">
             <li><i class="icon-plus-sign"></i> &ndash; Points earned.</li>
@@ -372,7 +416,7 @@
             <li><i class="icon-calendar"></i> &ndash; On 1 year veteran tapper ribbon.</li>
           </ul><!-- END .ct-icons -->
 
-          <h3>Action Notification Icons</h3>
+          <h3 id="icons-action-notification-icons">Action Notification Icons</h3>
           <p class="heading-sub">Icons used to communicate the stages of actions.</p>
           <ul class="ct-icons">
             <li><i class="icon-certificate"></i> &ndash; New actions</li>
@@ -381,6 +425,7 @@
           </ul><!-- END .ct-icons -->
 
         </div><!-- END .section -->
+
 
         <div class="section">
 
@@ -398,13 +443,13 @@
           <p class="heading-sub">We use a border radius of 3px on anything that has a rounded corner (which ends up being just about everything).</p>
 
         </div><!-- END .section -->
-
       </div><!-- END .main -->
     </div><!-- END #wrapper -->
 
     <script src="js/jquery.min.js"></script>
     <script src="js/localscroll.min.js"></script>
     <script src="js/scrollto.min.js"></script>
+    <script src="js/viewport.min.js"></script>
 
     <script>
       $(document).ready(function(){
@@ -412,26 +457,32 @@
           offset: -60 // Needs to match top padding on h2 elements
         });
 
-        // hide nav items on load (gracefully degrades to expanded
-        // menus if JS is disabled)
-        $('#nav li ul').hide();
+        $(window).scroll(function() {
+          var visibleHeadingId,
+              visibleHeading = $('div.section:in-viewport')
+                                .find('h2:in-viewport, h3:in-viewport')
+                                .eq(0);
 
-        $('#nav > li > a').hover(function() {
-          $(this).siblings('ul').slideDown('fast');
-        }, function() {
-          if(!$(this).hasClass('selected')) {
-            $(this).siblings('ul').slideUp('fast');
+          if(visibleHeading) {
+            var visibleHeadingId = visibleHeading.attr('id');
           }
+
+          $('#nav a').each(function() {
+            if($(this).attr('href').slice(1) === visibleHeadingId) {
+              $(this).addClass('selected');
+            } else {
+              $(this).removeClass('selected');
+            }
+          });
         });
 
         $('#nav > li > a').click(function() {
-          if(!$(this).hasClass('selected')) {
-            // remove all active styles and states from nav
-            $('#nav a').removeClass('selected');
-            $('#nav a').not($(this)).siblings('ul').slideUp('fast');
+          if(!$(this).hasClass('active')) {
+            $('#nav a').removeClass('active');
+            //$('#nav a').not($(this)).siblings('ul').slideUp('fast');
 
-            // add active styles to currently active element
-            $(this).addClass('selected');
+            $(this).addClass('active');
+            $(this).siblings('ul').slideDown('fast');
           }
         });
       });

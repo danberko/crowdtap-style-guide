@@ -37,8 +37,7 @@ h3 {
   color: #444;
   font-family: Rokkitt, serif;
   font-size: 36px;
-  margin-bottom: 10px;
-  padding-top: 40px;
+  margin: 40px 0 10px;
 }
 
 .clearfix:after {
@@ -73,8 +72,12 @@ h3 {
   width: 200px;
 }
 
-#nav li {
+#nav > li {
   border-bottom: 1px solid #ccc;
+}
+
+#nav > li > a {
+  font-size: 18px;
 }
 
 #nav li:last-child {
@@ -84,18 +87,20 @@ h3 {
 #nav a {
   color: inherit;
   display: block;
-  padding: 15px 10px;
+  padding: 10px;
   text-decoration: none;
 }
 
 #nav a:hover {
-  background: #e5ddcd;
+  /*background: #e5ddcd;*/
+  /*color: #444;*/
+}
+
+#nav a.selected, #nav a.active {
   color: #444;
 }
 
-#nav a.selected {
-  border-left: 5px solid #b75a5a;
-  color: #444;
+#nav a.active {
   font-weight: bold;
 }
 
