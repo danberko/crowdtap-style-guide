@@ -457,14 +457,15 @@
           offset: -60 // Needs to match top padding on h2 elements
         });
 
+        var visibleHeadingId;
+
         $(window).scroll(function() {
-          var visibleHeadingId,
-              visibleHeading = $('div.section:in-viewport')
+          var visibleHeading = $('div.section:in-viewport')
                                 .find('h2:in-viewport, h3:in-viewport')
                                 .eq(0);
 
-          if(visibleHeading) {
-            var visibleHeadingId = visibleHeading.attr('id');
+          if(visibleHeading.attr('id') !== undefined) {
+            visibleHeadingId = visibleHeading.attr('id');
           }
 
           $('#nav a').each(function() {
@@ -479,7 +480,6 @@
         $('#nav > li > a').click(function() {
           if(!$(this).hasClass('active')) {
             $('#nav a').removeClass('active');
-            //$('#nav a').not($(this)).siblings('ul').slideUp('fast');
 
             $(this).addClass('active');
             $(this).siblings('ul').slideDown('fast');

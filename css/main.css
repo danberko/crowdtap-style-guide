@@ -91,16 +91,12 @@ h3 {
   text-decoration: none;
 }
 
-#nav a:hover {
-  /*background: #e5ddcd;*/
-  /*color: #444;*/
-}
-
-#nav a.selected, #nav a.active {
-  color: #444;
+#nav a.selected, #nav a:hover {
+  font-weight: bold;
 }
 
 #nav a.active {
+  color: #444;
   font-weight: bold;
 }
 
