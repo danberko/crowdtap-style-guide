@@ -8,6 +8,16 @@
   </head>
   <body>
 
+    <div class="modal-hidden">
+      <div class="modal-container">
+        <i class="icon-remove"><a href="#close"></a></i>
+        <h3>Test Modal</h3>
+        <p>This is a test modal window</p>
+
+        <a class="primary-cta-wide" href="#modals">Excellent</a>
+      </div>
+    </div>
+
     <div id="wrapper">
 
       <ul id="nav">
@@ -28,7 +38,7 @@
         <li>
           <a href="#buttons">Buttons</a>
           <ul>
-            <li><a href=""></a><li>
+            <li><a href="#primary-cta">Primary CTA</a><li>
           </ul>
         </li>
         <li>
@@ -261,7 +271,7 @@
           <div class="font-example source-sans-pro">
 
             <h4>Source Sans Pro</h4>
-            <p>Body copy. The majority of our copy is set in Source Sans Pro.</p>
+            <p>The majority of our copy is set in Source Sans Pro.</p>
             <p class="sub">ex: Quickhit answers, button text, nav, brand page active/complete tabs for modules, disclaimer text, regular copy on brand page and modals</p>
 
             <div class="thumbnail-container clearfix">
@@ -359,7 +369,22 @@
           <h2 id="buttons">Buttons</h2>
 
           <h3>General</h3>
-          <p class="heading-sub"></p>
+          <p class="heading-sub">Sticking to a consistent family of buttons will allow for a button to hint at its functionality simply based on the type of button it is.</p>
+
+          <div id="primary-cta">
+            <h3>Primary Call to Action</h3>
+
+            <p class="heading-sub">The standard Crowdtap call to action is a big red button; it's really hard to miss. It's normally as wide as its content unless in its in a modal window, in which case its the same width as the content in the modal.</p>
+
+            <button class="primary-cta"><span>Normal button</span></button>
+            <button class="primary-cta-wide"><span>Wide modal button</span></button>
+          </div><!-- END #primary-cta -->
+
+          <div id="utility-buttons">
+            <h3>Utility Buttons</h3>
+
+            <p class="heading-sub">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+          </div><!-- END #utility-buttons -->
 
         </div><!-- END .section -->
 
@@ -368,7 +393,33 @@
           <h2 id="form-elements">Form Elements</h2>
 
           <h3>General</h3>
+          <p class="heading-sub">These are the common elements used to ensure that our forms appear to be part of the same family.</p>
+
+          <h3>Basic form elements</h3>
+
           <p class="heading-sub"></p>
+
+          <form class="default-form-elements">
+            <input type="text" />
+
+            <select>
+              <option>Option 1</option>
+              <option>Option 2</option>
+            </select>
+
+            <input type="checkbox" />
+          </form>
+
+          <form class="disabled-form-elements">
+            <input type="text" />
+
+            <select>
+              <option>Option 1</option>
+              <option>Option 2</option>
+            </select>
+
+            <input type="checkbox" />
+          </form>
 
         </div><!-- END .section -->
 
@@ -377,7 +428,9 @@
           <h2 id="modals">Modals</h2>
 
           <h3>General</h3>
-          <p class="heading-sub"></p>
+          <p class="heading-sub">Modal windows are employed when related content needs to be presented in a focused manner that doesn't take the user away from the page they're on.</p>
+
+          <button class="primary-cta modal-trigger">Show modal</button>
 
         </div><!-- END .section -->
 
@@ -417,7 +470,7 @@
           </ul><!-- END .ct-icons -->
 
           <h3 id="icons-action-notification-icons">Action Notification Icons</h3>
-          <p class="heading-sub">Icons used to communicate the stages of actions.</p>
+          <p class="heading-sub">Icons used to communicate the stage an action is currently in.</p>
           <ul class="ct-icons">
             <li><i class="icon-certificate"></i> &ndash; New actions</li>
             <li><i class="icon-tasks"></i> &ndash; In progress actions</li>
@@ -425,7 +478,6 @@
           </ul><!-- END .ct-icons -->
 
         </div><!-- END .section -->
-
 
         <div class="section">
 
@@ -453,6 +505,16 @@
 
     <script>
       $(document).ready(function(){
+
+        jQuery.fn.center = function () {
+            this.css("position","absolute");
+            this.css("top", Math.max(0, (($(window).height() - $(this).outerHeight()) / 2) + 
+                                                        $(window).scrollTop()) + "px");
+            this.css("left", Math.max(0, (($(window).width() - $(this).outerWidth()) / 2) + 
+                                                        $(window).scrollLeft()) + "px");
+            return this;
+        }
+
         $('#nav').localScroll({
           offset: -60 // Needs to match top padding on h2 elements
         });
@@ -485,6 +547,27 @@
             $(this).siblings('ul').slideDown('fast');
           }
         });
+      });
+
+      $('.modal-trigger.primary-cta').click(function() {
+
+        $('body').css('overflow', 'hidden');
+        $('.modal-hidden').addClass('modal-visible').removeClass('modal-hidden');
+        $('.modal-visible').css('height', $(document).height());
+        $('.modal-container').center().css('top', '-=200px');
+
+        event.preventDefault();
+      });
+
+      $('.modal-container .primary-cta-wide').click(function() { 
+        $('.icon-remove').click();
+
+        event.preventDefault(); 
+      });
+
+      $('.icon-remove').click(function() {
+        $('body').css('overflow', 'visible');
+        $('.modal-visible').addClass('modal-hidden').removeClass('modal-visible');
       });
     </script>
 
