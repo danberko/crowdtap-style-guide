@@ -8,6 +8,239 @@
   </head>
   <body>
 
+    <header>
+      <section class="header-inner">
+        <h1><img id="logo" src="img/ct_logo_black_red.png" alt="Crowdtap" /><h1>
+      </section>
+    </header>
+
+    <div id="main">
+      <section id="colors">
+
+        <h1>Colors, generally</h1>
+
+        <p>Crowdtap's aesthetic revolves around neutral colors&mdash;whites and grays&mdash;accented with bold colors.</p>
+        <p>Below are the core colors of the family but they are are not absolute. You may tint or shade them if necessary, with few exceptions</p>
+
+        <figure class="color-swatches">
+
+          <div class="core-colors clearfix">
+
+            <div class="color-container color-darkest-gray">
+              <div class="color-swatch"></div>
+              <figcaption>
+                <ul>
+                  <li><span>Hex:</span> #444444</li>
+                  <li><span>RGB:</span> 68/68/68</li>
+                  <li><span>CMYK:</span> 67/60/59/44</li>
+                </ul>
+              </figcaption>
+            </div>
+
+            <div class="color-container color-middle-gray">
+              <div class="color-swatch"></div>
+              <figcaption>
+                <ul>
+                  <li><span>Hex:</span> #777777</li>
+                  <li><span>RGB:</span> 119/119/119</li>
+                  <li><span>CMYK:</span> 55/46/46/11</li>
+                </ul>
+              </figcaption>
+            </div>
+
+            <div class="color-container color-light-gray">
+              <div class="color-swatch"></div>
+              <figcaption>
+                <ul>
+                  <li><span>Hex:</span> #eeeeee</li>
+                  <li><span>RGB:</span> 238/238/238</li>
+                  <li><span>CMYK:</span> 5/4/4/0</li>
+                </ul>
+              </figcaption>
+            </div>
+
+            <div class="color-container color-red">
+              <div class="color-swatch"></div>
+              <figcaption>
+                <ul>
+                  <li><span>Hex:</span> #d81e36</li>
+                  <li><span>RGB:</span> 216/30/54</li>
+                  <li><span>CMYK:</span> 8/96/86/1</li>
+                </ul>
+              </figcaption>
+            </div>
+
+          </div><!-- END .core-colors -->
+
+          <div class="accent-colors card clearfix">
+
+            <div class="color-container color-blue">
+              <div class="color-swatch"></div>
+              <figcaption>
+                <ul>
+                  <li><span>Hex:</span> #3fc3ef</li>
+                  <li><span>RGB:</span> 63/195/228</li>
+                  <li><span>CMYK:</span> 64/1/7/0</li>
+                </ul>
+              </figcaption>
+            </div>
+
+            <div class="color-container color-green">
+              <div class="color-swatch"></div>
+              <figcaption>
+                <ul>
+                  <li><span>Hex:</span> #45c15a</li>
+                  <li><span>RGB:</span> 69/193/90</li>
+                  <li><span>CMYK:</span> 71/0/88/0</li>
+                </ul>
+              </figcaption>
+            </div>
+
+            <div class="color-container color-purple">
+              <div class="color-swatch"></div>
+              <figcaption>
+                <ul>
+                  <li><span>Hex:</span> #8e53ac</li>
+                  <li><span>RGB:</span> 142/83/172</li>
+                  <li><span>CMYK:</span> 49/76/0/0</li>
+                </ul>
+              </figcaption>
+            </div>
+
+            <div class="color-container color-orange">
+              <div class="color-swatch"></div>
+              <figcaption>
+                <ul>
+                  <li><span>Hex:</span> #de7c1e</li>
+                  <li><span>RGB:</span> 222/142/30</li>
+                  <li><span>CMYK:</span> 10/60/100/1</li>
+                </ul>
+              </figcaption>
+            </div>
+          </div><!-- END .accent-colors -->
+
+        </figure>
+
+        <p>#444 and #777 are used as headline and body copy, respectively. #eee is used prominently as a background for module headings. Grays between #eee and #444 are welcome (and already present) where contrast, sections, dividers, etc are needed. Lastly, #d81e36 is used for call to actions and inline text links.</p>
+
+      </section><!-- END #colors -->
+
+      <section id="color-exceptions">
+        <h2>About those exceptions...</h2>
+
+        <ul>
+          <li><p>That wild and crazy red should be used exlusively for calls-to-action and links.</p></li>
+          <li><p><em>For now</em>, that orange is not used prominently throughout the UI. A derived version of it is used for the "in progress" action notification label. I suggest reserving this color for when nothing else works&mdash;as a Plan C, basically.</p></li>
+          <li><p>There shouldn't be anything darker than #444 without good reason.</p></li>
+        </ul>
+      </section><!-- END #color-exceptions -->
+
+      <section id="tinting-and-shading">
+        <h2>"Tinting" and shading</h2>
+
+        <p>The easiest and recommended way to extend our colors is to lower the base color's opacity for a lighter version and to add black for a darker version. You can manually choose a lighter/darker, too. Make sure you double check our colors if you do.</p>
+
+        <figure id="color-gradient">
+
+          <div class="row gray-family clearfix">
+            <div class="opacity-25"></div>
+            <div class="opacity-66"></div>
+            <div class="base"></div>
+            <div class="black-50"></div>
+            <div class="black-75"></div>
+          </div>
+
+          <div class="row blue-family clearfix">
+            <div class="opacity-25"></div>
+            <div class="opacity-66"></div>
+            <div class="base"></div>
+            <div class="black-50"></div>
+            <div class="black-75"></div>
+          </div>
+
+          <div class="row green-family clearfix">
+            <div class="opacity-25"></div>
+            <div class="opacity-66"></div>
+            <div class="base"></div>
+            <div class="black-50"></div>
+            <div class="black-75"></div>
+          </div>
+
+          <div class="row purple-family clearfix">
+            <div class="opacity-25"></div>
+            <div class="opacity-66"></div>
+            <div class="base"></div>
+            <div class="black-50"></div>
+            <div class="black-75"></div>
+          </div>
+
+          <ul class="row legend clearfix">
+            <li>Opacity @25%</li>
+            <li>Opacity @66%</li>
+            <li>Base color</li>
+            <li>Base +50% black</li>
+            <li>Base +75% black</li>
+          </ul>
+
+        </figure><!-- END #color-gradient -->
+
+        <figure class="color-gradient-ps-examples">
+          <img src="img/color-gradient-ps-examples.png" />
+        </figure>
+
+      </section><!-- END #tinting-and-shading -->
+
+      <section id="spot-colors">
+        <h2>Spot colors</h2>
+
+        <p>Applying our color palette is mostly done with spot colors that accent the area they're in. As most of our content sit on cards, there aren't many situations where we have areas of color as a background.</p>
+        <p>Typically, blue is the preferred accent color to use; it is loosely tied with points and game elements, so keep that in mind. If blue is not sensible, then green and purple should serve your purpose.</p>
+        <p>As with any spot color, they are used mostly to highlight and add to the hierarchy. Be careful with using too many in close proximity or things may start to look rainbow-y.</p>
+        <p>The examples below should be helpful in illustrating our spot color usage.</p>
+
+        <figure class="spot-colors-examples">
+          <img src="img/spot-colors-examples.png" />
+        </figure>
+
+      </section><!-- END #spot-colors -->
+
+      <section id="subsections">
+
+        <h2>Subsections</h2>
+
+        <p>For complex cards, creating smaller sections within them may become necessary. If this happens, a lighter version of our accent colors can be used (or a light gray) to fill that area. There are basic examples below but different solutions are welcome. Try to avoid completely unique approaches that can't be reused, however.</p>
+        <p>When using a subsection, changing the headline color to be a darker version of the background is helpful for getting good contrast. #777 should still be used as body copy, as the colored background should never be dark enough to conflict with it.</p>
+
+        <figure class="cards-with-subsections clearfix">
+
+          <div class="gray-subsection-middle card">
+            <section>
+              <h1>This card has a headline</h1>
+              <div class="subsection">
+                <h2>And a middle section</h2>
+                <p>With supporting copy</p>
+              </div>
+              <p>Oh yes it does.</p>
+            </section>
+          </div><!-- END .gray-subsection.card -->
+
+          <div class="gray-subsection-top card">
+            <section>
+              <div class="subsection">
+                <h2>And a middle section</h2>
+                <p>With supporting copy</p>
+              </div>
+              <h1>This card has a headline</h1>
+              <p>Oh yes it does.</p>
+            </section>
+          </div><!-- END .gray-subsection.card -->
+
+        </figure>
+
+      </section><!-- END #subsections -->
+
+    </div><!-- END #main -->
+
     <script src="js/jquery.min.js"></script>
     <script>
       $(document).ready(function(){

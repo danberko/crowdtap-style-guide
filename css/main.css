@@ -5,6 +5,20 @@ body {
   font-size: 16px;
 }
 
+h1, h2, h3, h4, h5, h6, p, ul {
+  width: 600px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #444;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
 a {
   color: #d81e36;
   text-decoration: none;
@@ -16,12 +30,374 @@ a:hover {
 
 p {
   line-height: 1.5;
+  margin-bottom: 20px;
 }
 
-#wrapper {
-  width: 1024px;
-  margin: 0 auto;
+.card {
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+  padding: 20px;
 }
+
+section {
+  margin-bottom: 40px;
+}
+
+section > h1 {
+  font: 22px "Oxygen", Trebuchet, Verdana, Lucida Grande, sans-serif;
+}
+
+/**************************************
+
+          Header
+
+**************************************/
+
+body > header {
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.25);
+  position: fixed;
+  width: 100%;
+}
+
+.header-inner {
+  margin: 0 auto;
+  padding: 13px 0;
+  width: 1024px;
+}
+
+.header-inner h1 {
+  margin-bottom: 0;
+}
+
+/**************************************
+
+          Main
+
+**************************************/
+
+#main {
+  margin: 0 auto;
+  padding-top: 90px;
+  width: 1024px;
+}
+
+#main p {
+  text-align: left;
+}
+
+
+/**************************************
+
+          Color swatch craziness
+
+**************************************/
+
+.color-swatches {
+  background: url('../img/accents-indicator.png') no-repeat bottom left;
+  font-size: 14px;
+  margin: 40px 0;
+  padding-bottom: 50px;
+}
+
+.color-swatches .color-swatch {
+  height: 130px;
+  margin-bottom: 10px;
+  width: 130px;
+}
+
+.color-container {
+  float: left;
+  margin-right: 20px;
+  width: 130px;
+}
+
+.color-container:last-child {
+  margin-right: 0;
+}
+
+.color-swatches li {
+  margin-bottom: 10px;
+}
+
+.color-swatches li span {
+  color: #444;
+  font-weight: bold;
+}
+
+.core-colors {
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.color-swatches .color-darkest-gray {
+  color: #444;
+}
+
+.color-swatches .color-darkest-gray .color-swatch {
+  background-color: #444;
+}
+
+.color-swatches .color-middle-gray {
+  color: #777;
+}
+
+.color-swatches .color-middle-gray .color-swatch {
+  background-color: #777;
+}
+
+.color-swatches .color-light-gray {
+  color: #777;
+}
+
+.color-swatches .color-light-gray .color-swatch {
+  background-color: #eee;
+}
+
+.color-swatches .color-red {
+  color: #d81e36;
+}
+
+.color-swatches .color-red .color-swatch {
+  background-color: #d81e36;
+}
+
+.accent-colors {
+  background: #fff;
+  width: 580px;
+}
+
+.color-swatches .color-blue {
+  color: #3fc3ef;
+}
+
+.color-swatches .color-blue .color-swatch {
+  background-color: #3fc3ef;
+}
+
+.color-swatches .color-green {
+  color: #45c15a;
+}
+
+.color-swatches .color-green .color-swatch {
+  background-color: #45c15a;
+}
+
+.color-swatches .color-purple {
+  color: #8e53ac;
+}
+
+.color-swatches .color-purple .color-swatch {
+  background-color: #8e53ac;
+}
+
+.color-swatches .color-orange {
+  color: #de7c1e;
+}
+
+.color-swatches .color-orange .color-swatch {
+  background-color: #de7c1e;
+}
+
+
+/**************************************
+
+          Color exceptions
+
+**************************************/
+
+#color-exceptions li {
+  list-style: disc;
+  margin: 0 0 10px 20px;
+}
+
+
+/**************************************
+
+          Color gradients
+
+**************************************/
+
+#color-gradient {
+  background: #fff;
+  padding: 20px;
+  width: 730px;
+}
+
+#color-gradient .row {
+  margin-bottom: 20px;
+}
+
+#color-gradient .row:last-child {
+  margin-bottom: 0;
+}
+
+#color-gradient .row > div {
+  float: left;
+  margin-right: 20px;
+}
+
+#color-gradient .row > div:last-child {
+  margin-right: 0;
+}
+
+#color-gradient .row > div {
+  height: 130px;
+  width: 130px;
+}
+
+.gray-family .opacity-25 {
+  background: #eeeeee;
+}
+
+.gray-family .opacity-66 {
+  background: #dddddd;
+}
+
+.gray-family .base {
+  background: #aaaaaa;
+}
+
+.gray-family .black-50 {
+  background: #777777;
+}
+
+.gray-family .black-75 {
+  background: #444444;
+}
+
+.blue-family .opacity-25 {
+  background: #cff0f8;
+}
+
+.blue-family .opacity-66 {
+  background: #81d7ed;
+}
+
+.blue-family .base {
+  background: #3fc3e4;
+}
+
+.blue-family .black-50 {
+  background: #217489;
+}
+
+.blue-family .black-75 {
+  background: #034d5d;
+}
+
+.green-family .opacity-25 {
+  background: #d0efd6;
+}
+
+.green-family .opacity-66 {
+  background: #84d692;
+}
+
+.green-family .base {
+  background: #45c15a;
+}
+
+.green-family .black-50 {
+  background: #227033;
+}
+
+.green-family .black-75 {
+  background: #014b1b;
+}
+
+.purple-family .opacity-25 {
+  background: #e3d4ea;
+}
+
+.purple-family .opacity-66 {
+  background: #b58ec8;
+}
+
+.purple-family .base {
+  background: #8e53ac;
+}
+
+.purple-family .black-50 {
+  background: #542b62;
+}
+
+.purple-family .black-75 {
+  background: #360d40;
+}
+
+#color-gradient .legend li {
+  float: left;
+  font-size: 14px;
+  font-weight: bold;
+  margin-right: 20px;
+  text-align: center;
+  width: 130px;
+}
+
+#color-gradient .legend {
+  width: inherit;
+}
+
+#color-gradient .legend li:last-child {
+  margin-right: 0;
+}
+
+.color-gradient-ps-examples {
+  margin: 20px 0 0 20px;
+}
+
+
+
+/**************************************
+
+          Subsections
+
+**************************************/
+
+.cards-with-subsections > div {
+  float: left;
+  margin-right: 60px;
+  width: 330px;
+}
+
+.cards-with-subsections > div h1 {
+  margin-bottom: 10px;
+}
+
+.cards-with-subsections section {
+  margin-bottom: 0;
+}
+
+.cards-with-subsections > div p:last-child {
+  margin-bottom: 0;
+}
+
+.subsection {
+  padding: 10px;
+  border-width: 1px;
+  border-style: solid;
+  margin-bottom: 10px;
+}
+
+.subsection h2 {
+  font: 18px Oxygen, Trebuchet, Verdana, Lucida Grande, sans-serif;
+  margin-bottom: 0;
+  text-transform: none;
+}
+
+.subsection p:last-child {
+  margin-bottom: 0;
+}
+
+.gray-subsection-middle .subsection {
+  background: #f6f6f6;
+  border-color: #dbdbdb;
+}
+
+.gray-subsection-top .subsection {
+  background: #f6f6f6;
+  border-color: #dbdbdb;
 
 /**************************************
 
