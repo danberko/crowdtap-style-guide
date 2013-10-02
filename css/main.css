@@ -94,22 +94,22 @@ body > header {
 **************************************/
 
 .color-swatches {
-  background: url('../img/accents-indicator.png') no-repeat bottom left;
+  background: #fff;
   font-size: 14px;
   margin: 40px 0;
-  padding-bottom: 50px;
+  width: 730px;
 }
 
-.color-swatches .color-swatch {
+.color-swatch {
   height: 130px;
   margin-bottom: 10px;
   width: 130px;
 }
 
 .color-container {
-  float: left;
-  margin-right: 20px;
+  display: inline-block;
   width: 130px;
+  margin-right: 16px;
 }
 
 .color-container:last-child {
@@ -126,77 +126,119 @@ body > header {
 }
 
 .core-colors {
-  padding-left: 20px;
   margin-bottom: 20px;
 }
 
-.color-swatches .color-darkest-gray {
+.color-darkest-gray {
   color: #444;
 }
 
-.color-swatches .color-darkest-gray .color-swatch {
+.color-darkest-gray .color-swatch,
+.color-swatch-mini.color-darkest-gray {
   background-color: #444;
 }
 
-.color-swatches .color-middle-gray {
+.color-middle-gray {
   color: #777;
 }
 
-.color-swatches .color-middle-gray .color-swatch {
+.color-middle-gray .color-swatch,
+.color-swatch-mini.color-middle-gray {
   background-color: #777;
 }
 
-.color-swatches .color-light-gray {
+.color-light-gray {
   color: #777;
 }
 
-.color-swatches .color-light-gray .color-swatch {
+.color-light-gray .color-swatch,
+.color-swatch-mini.color-light-gray {
   background-color: #eee;
+  border: 1px solid #ccc;
+  height: 128px;
+  width: 128px;
 }
 
-.color-swatches .color-red {
+.color-red {
   color: #d81e36;
 }
 
-.color-swatches .color-red .color-swatch {
+.color-red .color-swatch,
+.color-swatch-mini.color-red {
   background-color: #d81e36;
 }
 
-.accent-colors {
-  background: #fff;
-  width: 580px;
+.color-blue {
+  color: #069aa4;
 }
 
-.color-swatches .color-blue {
-  color: #3fc3ef;
+.color-blue .color-swatch,
+.color-swatch-mini.color-blue {
+  background-color: #069aa4;
 }
 
-.color-swatches .color-blue .color-swatch {
-  background-color: #3fc3ef;
-}
-
-.color-swatches .color-green {
+.color-green {
   color: #45c15a;
 }
 
-.color-swatches .color-green .color-swatch {
+.color-green .color-swatch,
+.color-swatch-mini.color-green {
   background-color: #45c15a;
 }
 
-.color-swatches .color-purple {
-  color: #8e53ac;
+.color-purple {
+  color: #a861d4;
 }
 
-.color-swatches .color-purple .color-swatch {
-  background-color: #8e53ac;
+.color-purple .color-swatch,
+.color-swatch-mini.color-purple {
+  background-color: #a861d4;
 }
 
-.color-swatches .color-orange {
-  color: #de7c1e;
+.color-orange {
+  color: #ffb400;
 }
 
-.color-swatches .color-orange .color-swatch {
-  background-color: #de7c1e;
+.color-orange .color-swatch,
+.color-swatch-mini.color-orange {
+  background-color: #ffb400;
+}
+
+.color-combinations > div {
+  background: #fff;
+  padding: 20px 10px 20px 20px;
+  margin-bottom: 20px;
+}
+
+.color-combinations .red-blue {
+  width: 340px;
+}
+
+.color-combinations .blue-red-green-purple {
+  width: 510px;
+}
+
+.color-combinations .green-blue-red,
+.color-combinations .blue-red-purple,
+.color-combinations .green-orange-red,
+.color-combinations .orange-red-purple {
+  width: 425px;
+}
+
+.color-swatch-mini {
+  display: inline-block;
+  height: 75px;
+  width: 75px;
+  margin-right: 6px;
+}
+
+.color-swatch-mini:last-child {
+  margin-right: 0;
+}
+
+.color-swatch-mini.color-light-gray {
+  height: 73px;
+  width: 73px;
 }
 
 
@@ -233,8 +275,8 @@ body > header {
 }
 
 #color-gradient .row > div {
-  float: left;
-  margin-right: 20px;
+  display: inline-block;
+  margin-right: 16px;
 }
 
 #color-gradient .row > div:last-child {
@@ -404,10 +446,3 @@ body > header {
           Misc
 
 **************************************/
-
-.clearfix:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
