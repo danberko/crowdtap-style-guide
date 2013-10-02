@@ -3,574 +3,304 @@
     <title>Crowdtap Style Guide</title>
     <link href="css/reset.css" rel="stylesheet" type="text/css">
     <link href="css/main.css" rel="stylesheet" type="text/css">
-    <link href='http://fonts.googleapis.com/css?family=Rokkitt|Source+Sans+Pro:400,600,700|Oswald' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Oxygen|Source+Sans+Pro:400,600,700|Oswald' rel='stylesheet' type='text/css'>
     <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
   </head>
   <body>
 
-    <div class="modal-hidden">
-      <div class="modal-container">
-        <i class="icon-remove"><a href="#close"></a></i>
-        <h3>Test Modal</h3>
-        <p>This is a test modal window</p>
+    <header>
+      <section class="header-inner">
+        <h1><img id="logo" src="img/ct_logo_black_red.png" alt="Crowdtap" /><h1>
+      </section>
+    </header>
 
-        <a class="primary-cta-wide" href="#modals">Excellent</a>
-      </div>
-    </div>
+    <div id="main">
 
-    <div id="wrapper">
+      <section id="colors">
 
-      <ul id="nav">
-        <li>
-          <a href="#colors" class="active">Colors</a>
-          <ul>
-            <li><a href="#colors-text">Text</a><li>
-            <li><a href="#colors-action-stages">Action stages</a><li>
+        <h1>Colors, generally</h1>
+
+        <p>Crowdtap's aesthetic revolves around neutral colors&mdash;whites and grays&mdash;accented with bold colors.</p>
+        <p>Below are the core colors of the family but they are are not absolute. You may tint or shade them if necessary, with few exceptions</p>
+
+        <figure class="color-swatches card">
+
+          <div class="core-colors clearfix">
+
+            <div class="color-container color-darkest-gray">
+              <div class="color-swatch"></div>
+              <div class="color-codes">
+                <ul>
+                  <li><span>Hex:</span> #444444</li>
+                  <li><span>RGB:</span> 68/68/68</li>
+                  <li><span>CMYK:</span> 67/60/59/44</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="color-container color-middle-gray">
+              <div class="color-swatch"></div>
+              <div class="color-codes">
+                <ul>
+                  <li><span>Hex:</span> #777777</li>
+                  <li><span>RGB:</span> 119/119/119</li>
+                  <li><span>CMYK:</span> 55/46/46/11</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="color-container color-light-gray">
+              <div class="color-swatch"></div>
+              <div class="color-codes">
+                <ul>
+                  <li><span>Hex:</span> #eeeeee</li>
+                  <li><span>RGB:</span> 238/238/238</li>
+                  <li><span>CMYK:</span> 5/4/4/0</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="color-container color-red">
+              <div class="color-swatch"></div>
+              <div class="color-codes">
+                <ul>
+                  <li><span>Hex:</span> #d81e36</li>
+                  <li><span>RGB:</span> 216/30/54</li>
+                  <li><span>CMYK:</span> 8/96/86/1</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="color-container color-blue">
+              <div class="color-swatch"></div>
+              <div class="color-codes">
+                <ul>
+                  <li><span>Hex:</span> #3fc3ef</li>
+                  <li><span>RGB:</span> 63/195/228</li>
+                  <li><span>CMYK:</span> 64/1/7/0</li>
+                </ul>
+              </div>
+            </div>
+
+          </div><!-- END .core-colors -->
+
+          <div class="accent-colors clearfix">
+
+            <div class="color-container color-green">
+              <div class="color-swatch"></div>
+              <div class="color-codes">
+                <ul>
+                  <li><span>Hex:</span> #45c15a</li>
+                  <li><span>RGB:</span> 69/193/90</li>
+                  <li><span>CMYK:</span> 71/0/88/0</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="color-container color-purple">
+              <div class="color-swatch"></div>
+              <div class="color-codes">
+                <ul>
+                  <li><span>Hex:</span> #8e53ac</li>
+                  <li><span>RGB:</span> 142/83/172</li>
+                  <li><span>CMYK:</span> 49/76/0/0</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="color-container color-orange">
+              <div class="color-swatch"></div>
+              <div class="color-codes">
+                <ul>
+                  <li><span>Hex:</span> #de7c1e</li>
+                  <li><span>RGB:</span> 222/142/30</li>
+                  <li><span>CMYK:</span> 10/60/100/1</li>
+                </ul>
+              </div>
+            </div>
+          </div><!-- END .accent-colors -->
+
+        </figure>
+
+        <h2>All together now</h2>
+
+        <figure class="color-combinations">
+
+          <div class="red-blue card">
+            <div class="color-swatch-mini color-red"></div>
+            <div class="color-swatch-mini color-blue"></div>
+            <div class="color-swatch-mini color-darkest-gray"></div>
+            <div class="color-swatch-mini color-light-gray"></div>
+          </div>
+
+          <div class="blue-red-green-purple card">
+            <div class="color-swatch-mini color-blue"></div>
+            <div class="color-swatch-mini color-red"></div>
+            <div class="color-swatch-mini color-green"></div>
+            <div class="color-swatch-mini color-purple"></div>
+            <div class="color-swatch-mini color-darkest-gray"></div>
+            <div class="color-swatch-mini color-light-gray"></div>
+          </div>
+
+          <div class="green-blue-red card">
+            <div class="color-swatch-mini color-green"></div>
+            <div class="color-swatch-mini color-blue"></div>
+            <div class="color-swatch-mini color-red"></div>
+            <div class="color-swatch-mini color-darkest-gray"></div>
+            <div class="color-swatch-mini color-light-gray"></div>
+          </div>
+
+          <div class="blue-red-purple card">
+            <div class="color-swatch-mini color-blue"></div>
+            <div class="color-swatch-mini color-red"></div>
+            <div class="color-swatch-mini color-purple"></div>
+            <div class="color-swatch-mini color-darkest-gray"></div>
+            <div class="color-swatch-mini color-light-gray"></div>
+          </div>
+
+          <div class="green-orange-red card">
+            <div class="color-swatch-mini color-green"></div>
+            <div class="color-swatch-mini color-orange"></div>
+            <div class="color-swatch-mini color-red"></div>
+            <div class="color-swatch-mini color-darkest-gray"></div>
+            <div class="color-swatch-mini color-light-gray"></div>
+          </div>
+
+          <div class="orange-red-purple card">
+            <div class="color-swatch-mini color-orange"></div>
+            <div class="color-swatch-mini color-red"></div>
+            <div class="color-swatch-mini color-purple"></div>
+            <div class="color-swatch-mini color-darkest-gray"></div>
+            <div class="color-swatch-mini color-light-gray"></div>
+          </div>
+
+        </figure>
+
+      </section><!-- END #colors -->
+
+      <section id="color-exceptions">
+
+        <h2>About those exceptions...</h2>
+
+        <ul>
+          <li><p>That wild and crazy red should be used exlusively for calls-to-action and links.</p></li>
+          <li><p><em>For now</em>, that orange is not used prominently throughout the UI. A derived version of it is used for the "in progress" action notification label. I suggest reserving this color for when nothing else works&mdash;as a Plan C, basically.</p></li>
+          <li><p>There shouldn't be anything darker than #444 without good reason.</p></li>
+        </ul>
+
+      </section><!-- END #color-exceptions -->
+
+      <section id="tinting-and-shading">
+
+        <h2>"Tinting" and shading</h2>
+
+        <p>The easiest and recommended way to extend our colors is to lower the base color's opacity for a lighter version and to add black for a darker version. You can manually choose a lighter/darker, too. Make sure you double check our colors if you do.</p>
+
+        <figure id="color-gradient">
+
+          <div class="row gray-family clearfix">
+            <div class="opacity-25"></div>
+            <div class="opacity-66"></div>
+            <div class="base"></div>
+            <div class="black-50"></div>
+            <div class="black-75"></div>
+          </div>
+
+          <div class="row blue-family clearfix">
+            <div class="opacity-25"></div>
+            <div class="opacity-66"></div>
+            <div class="base"></div>
+            <div class="black-50"></div>
+            <div class="black-75"></div>
+          </div>
+
+          <div class="row green-family clearfix">
+            <div class="opacity-25"></div>
+            <div class="opacity-66"></div>
+            <div class="base"></div>
+            <div class="black-50"></div>
+            <div class="black-75"></div>
+          </div>
+
+          <div class="row purple-family clearfix">
+            <div class="opacity-25"></div>
+            <div class="opacity-66"></div>
+            <div class="base"></div>
+            <div class="black-50"></div>
+            <div class="black-75"></div>
+          </div>
+
+          <ul class="row legend clearfix">
+            <li>Opacity @25%</li>
+            <li>Opacity @66%</li>
+            <li>Base color</li>
+            <li>Base +50% black</li>
+            <li>Base +75% black</li>
           </ul>
-        </li>
-        <li>
-          <a href="#typography">Typography</a>
-          <ul>
-            <li><a href="#typography-sizes">Sizes</a><li>
-            <li><a href="#typography-pairings">Pairings</a><li>
-          </ul>
-        </li>
-        <li>
-          <a href="#buttons">Buttons</a>
-          <ul>
-            <li><a href="#primary-cta">Primary CTA</a><li>
-          </ul>
-        </li>
-        <li>
-          <a href="#form-elements">Form Elements</a>
-          <ul>
-            <li><a href=""></a><li>
-          </ul>
-        </li>
-        <li>
-          <a href="#modals">Modals</a>
-          <ul>
-            <li><a href=""></a><li>
-          </ul>
-        </li>
-        <li>
-          <a href="#icons">Icons</a>
-          <ul>
-            <li><a href="#icons-global-ui-icons">Global UI Icons</a><li>
-            <li><a href="#icons-brand-page-icons">Brand Page Icons</a><li>
-            <li><a href="#icons-game-icons">Game Icons</a><li>
-            <li><a href="#icons-action-notification-icons">Action Notification Icons</a><li>
-          </ul>
-        </li>
-        <li>
-          <a href="#details">Details / Flourishes</a>
-          <ul>
-            <li><a href=""></a><li>
-          </ul>
-        </li>
-      </ul><!-- END .nav -->
-
-      <div class="main">
-
-        <div class="section">
-
-          <h2 id="colors">Colors</h2>
-          <h3>General</h3>
-          <p class="heading-sub">These colors are used across the UI; they make up our family of colors</p>
-
-          <div class="color-swatch clearfix">
-
-            <div class="container">
-              <div class="color blue"></div>
-              <p class="blue">#51b2ca</p>
-            </div><!-- END .container -->
-
-            <div class="description">
-              <p>This blue is used for point related numbering and highlighting.</p>
-              <p class="sub">ex: points in nameplate, point badges on actions, point highlights in gutter notifications</p>
-            </div><!-- END .description -->
-
-          </div><!-- END .color-swatch -->
-
-          <div class="color-swatch clearfix">
-
-            <div class="container">
-              <div class="color red"></div>
-              <p class="red">#eb1b0d</p>
-            </div><!-- END .container -->
-
-            <div class="description">
-              <p>Our official red. This should only be used on call to actions. It does not play nicely with other colors.</p>
-            </div><!-- END .description -->
-
-          </div><!-- END .color-swatch -->
-
-          <div class="color-swatch clearfix">
-
-            <div class="container">
-              <div class="color maroon"></div>
-              <p class="maroon">#b75a5a</p>
-            </div><!-- END .container -->
-
-            <div class="description">
-              <p>This maroon-ish red is used where we'd normally use our official red if that color played nicely with other colors. This color doesn't have as strong an association as blue does with points, so there is more freedom using this color with elements. Inline text links should be this color.</p>
-            </div><!-- END .description -->
-
-          </div><!-- END .color-swatch -->
-
-          <div class="color-swatch clearfix">
-
-            <div class="container inverted">
-              <div class="color bg-brown"></div>
-              <p class="bg-brown">#d3cfc6</p>
-            </div><!-- END .container -->
-
-            <div class="description">
-              <p>The base color for our background <em>(without texture)</em>.</p>
-            </div><!-- END .description -->
 
-          </div><!-- END .color-swatch -->
+        </figure><!-- END #color-gradient -->
 
-          <div class="color-swatch clearfix">
+        <figure class="color-gradient-ps-examples">
+          <img src="img/color-gradient-ps-examples.png" />
+        </figure>
 
-            <div class="container inverted">
-              <div class="color nameplate-brown"></div>
-              <p class="nameplate-brown">#ebe6dc</p>
-            </div><!-- END .container -->
+      </section><!-- END #tinting-and-shading -->
 
-            <div class="description">
-              <p>The base color for the background of the nameplate. This color is used as a background and can contrast well against our darker, textured background.</p>
-            </div><!-- END .description -->
+      <section id="spot-colors">
 
-          </div><!-- END .color-swatch -->
+        <h2>Spot colors</h2>
 
-          <div class="color-swatch clearfix">
+        <p>Applying our color palette is mostly done with spot colors that accent the area they're in. As most of our content sit on cards, there aren't many situations where we have areas of color as a background.</p>
+        <p>Typically, blue is the preferred accent color to use; it is loosely tied with points and game elements, so keep that in mind. If blue is not sensible, then green and purple should serve your purpose.</p>
+        <p>As with any spot color, they are used mostly to highlight and add to the hierarchy. Be careful with using too many in close proximity or things may start to look rainbow-y.</p>
+        <p>The examples below should be helpful in illustrating our spot color usage.</p>
 
-            <div class="container">
-              <div class="color black"></div>
-              <p class="black">#444444</p>
-            </div><!-- END .container -->
+        <figure class="spot-colors-examples">
+          <img src="img/spot-colors-examples.png" />
+        </figure>
 
-            <div class="description">
-              <p>No element should be darker than #444, without good reason. Prizes, is a good example of an area that has darker colors.</p>
-            </div><!-- END .description -->
+      </section><!-- END #spot-colors -->
 
-          </div><!-- END .color-swatch -->
+      <section id="subsections">
 
-          <div class="color-swatch clearfix">
+        <h2>Subsections</h2>
 
-            <div class="container inverted">
-              <div class="color white"></div>
-              <p class="white">#f9f9f9</p>
-            </div><!-- END .container -->
+        <p>For complex cards, creating smaller sections within them may become necessary. If this happens, a lighter version of our accent colors can be used (or a light gray) to fill that area. There are basic examples below but different solutions are welcome. Try to avoid completely unique approaches that can't be reused, however.</p>
+        <p>When using a subsection, changing the headline color to be a darker version of the background is helpful for getting good contrast. #777 should still be used as body copy, as the colored background should never be dark enough to conflict with it.</p>
 
-            <div class="description">
-              <p>Our "white" is actually an extremely light gray. Large content areas, like the modules on the brand page, use this as a background.</p>
-            </div><!-- END .description -->
+        <figure class="cards-with-subsections clearfix">
 
-          </div><!-- END .color-swatch -->
+          <div class="gray-subsection-middle card">
+            <section>
+              <h1>This card has a headline</h1>
+              <div class="subsection">
+                <h2>And a middle section</h2>
+                <p>With supporting copy</p>
+              </div>
+              <p>Oh yes it does.</p>
+            </section>
+          </div><!-- END .gray-subsection.card -->
 
-          <h3 id="colors-text">Text</h3>
-          <p class="heading-sub">These colors will generally get you where you need to go in most text layout situations. These will work well on a white (or similar) background or on either of our beige textured backgrounds.</p>
+          <div class="gray-subsection-top card">
+            <section>
+              <div class="subsection">
+                <h2>And a middle section</h2>
+                <p>With supporting copy</p>
+              </div>
+              <h1>This card has a headline</h1>
+              <p>Oh yes it does.</p>
+            </section>
+          </div><!-- END .gray-subsection.card -->
 
-          <div class="color-swatch clearfix">
+        </figure>
 
-            <div class="container">
-              <div class="color black"></div>
-              <p class="black">#444444</p>
-            </div><!-- END .container -->
+      </section><!-- END #subsections -->
 
-            <div class="description">
-              <p>This is the darkest black text should be set in, unless legibility is poor.</p>
-            </div><!-- END .description -->
-
-          </div><!-- END .color-swatch -->
-
-          <div class="color-swatch clearfix">
-
-            <div class="container">
-              <div class="color default-text-gray"></div>
-              <p class="default-text-gray">#777777</p>
-            </div><!-- END .container -->
-
-            <div class="description">
-              <p></p>
-              <p class="sub"></p>
-            </div><!-- END .description -->
-
-          </div><!-- END .color-swatch -->
-
-          <p class="note">In some situations, text may be set on a background that creates too much/little contrast with the standard text colors (usually #444 will appear too dark on these backgrounds or #777 will not be legible). In these cases, choosing a color that is close to the intended color in value but close to the background color in hue should preserve the contrast and hierarchy.</p>
-
-          <h3 id="colors-action-stages">Action stages</h3>
-          <p class="heading-sub"></p>
-
-          <div class="color-swatch clearfix">
-
-            <div class="container">
-              <div class="color green"></div>
-              <p class="green">#73bf2b</p>
-            </div><!-- END .container -->
-
-            <div class="description">
-              <p>New actions are associated with this color&mdash;icons, labels, text colors, etc.</p>
-            </div><!-- END .description -->
-
-          </div><!-- END .color-swatch -->
-
-          <div class="color-swatch clearfix">
-
-            <div class="container">
-              <div class="color yellow"></div>
-              <p class="yellow">#c9ab25</p>
-            </div><!-- END .container -->
-
-            <div class="description">
-              <p>In progress actions are associated with this color&mdash;icons, labels, text colors, etc.</p>
-              <p class="sub"></p>
-            </div><!-- END .description -->
-
-          </div><!-- END .color-swatch -->
-
-          <div class="color-swatch clearfix">
-
-            <div class="container">
-              <div class="color maroon"></div>
-              <p class="maroon">#b75a5a</p>
-            </div><!-- END .container -->
-
-            <div class="description">
-              <p>Expiring actions are associated with this color&mdash;icons, labels, text colors, etc.</p>
-              <p class="sub"></p>
-            </div><!-- END .description -->
-
-          </div><!-- END .color-swatch -->
-
-        </div><!-- END .section -->
-
-        <div class="section">
-
-          <h2 id="typography">Typography</h2>
-          <h3>General</h3>
-          <p class="heading-sub">Crowdtap employs three typefaces on the member side to create a variety of hierarchy options, groupings, and pairings that are clear and balanced. These typographic guidelines will help when setting areas of text on a page.</p>
-
-          <div class="font-example rokkitt">
-
-            <h4>Rokkitt</h4>
-            <p>General headline/heading text&mdash;used for display.</p>
-            <p class="sub">ex: sectional heading on forms, headline copy on modal windows, headline/sub headline on nameplate</p>
-
-            <div class="thumbnail-container clearfix">
-              <a href="#" ><img src="http://placehold.it/165x165&text=example+image" /></a>
-              <a href="#" ><img src="http://placehold.it/165x165&text=example+image" /></a>
-              <a href="#" ><img src="http://placehold.it/165x165&text=example+image" /></a>
-            </div><!-- END .thumbnail-container -->
-
-          </div><!-- END .font-example -->
-
-          <div class="font-example source-sans-pro">
-
-            <h4>Source Sans Pro</h4>
-            <p>The majority of our copy is set in Source Sans Pro.</p>
-            <p class="sub">ex: Quickhit answers, button text, nav, brand page active/complete tabs for modules, disclaimer text, regular copy on brand page and modals</p>
-
-            <div class="thumbnail-container clearfix">
-              <a href="#" ><img src="http://placehold.it/165x165&text=example+image" /></a>
-              <a href="#" ><img src="http://placehold.it/165x165&text=example+image" /></a>
-              <a href="#" ><img src="http://placehold.it/165x165&text=example+image" /></a>
-            </div><!-- END .thumbnail-container -->
-
-          </div><!-- END .font-example -->
-
-          <div class="font-example oswald">
-
-            <h4>Oswald</h4>
-            <p>Sectional heading when Rokkitt is not available/appropriate or as a major heading for a module/contained page element. Oswald should be used sparingly and almost exclusively as a heading label--the main exception being numbers that represent components of our game mechanics.</p>
-            <p class="sub">ex: Quickhit answers, button text, nav, brand page active/complete tabs for modules, disclaimer text, regular copy on brand page and modals</p>
-
-            <div class="thumbnail-container clearfix">
-              <a href="#" ><img src="http://placehold.it/165x165&text=example+image" /></a>
-              <a href="#" ><img src="http://placehold.it/165x165&text=example+image" /></a>
-              <a href="#" ><img src="http://placehold.it/165x165&text=example+image" /></a>
-            </div><!-- END .thumbnail-container -->
-
-          </div><!-- END .font-example -->
-
-          <h3 id="typography-sizes">Sizes</h3>
-          <p class="heading-sub">The only hard rule for font sizing is copy that is meant to be read at length should not be smaller than 16px. If there is a reason to reduce the font size then 14px is the absolute baseline for body copy in a given area. Small text can be seen in places but these are areas of text that are short (gutter notification copy) or not meant to be read (disclaimer copy).</p>
-
-          <h3 id="typography-pairings">Pairings</h3>
-          <p class="heading-sub">Pairing the fonts in our family is an important detail to pay attention to. Good typography will keep the text on pages from feeling like it's all the same and make digesting/reading the page easier.</p>
-
-          <div class="type-pairing rokkitt-source-sans-pro clearfix">
-
-              <h4><span class="rokkitt">Rokkitt</span> <span class="source-sans-pro">+ Source Sans Pro</span></h4>
-
-            <div class="example">
-              <p class="rokkitt">This is a heading</p>
-              <p class="source-sans-pro">This is body copy that gives more context to the headline above.</p>
-            </div><!-- END .example -->
-
-            <div class="container">
-              <p>This is our most common headline/body copy relationship. Rokkitt contrasts very well with Source Sans Pro.</p>
-            </div><!-- END .container -->
-
-          </div><!-- END .type-pairing -->
-
-          <div class="type-pairing rokkitt-oswald clearfix">
-
-              <h4><span class="rokkitt">Rokkitt</span> <span class="oswald">+ Oswald</span></h4>
-
-            <div class="example">
-              <p class="rokkitt">Big number</p>
-              <p class="oswald">12,129</p>
-            </div><!-- END .example -->
-
-            <div class="container">
-              <p>This pairing is common for numbers that need a label (above/below).</p>
-            </div><!-- END .container -->
-
-          </div><!-- END .type-pairing -->
-
-          <div class="type-pairing oswald-source-sans-pro clearfix">
-
-              <h4><span class="oswald">Oswald</span> <span class="source-sans-pro">+ Source Sans Pro</span></h4>
-
-            <div class="example">
-              <p class="oswald">Heading</p>
-              <p class="source-sans-pro">The Oswald heading is in all caps in this case. In most places Oswald appears as a heading it will be in all caps because of the distinct style of its tall, condensed letterforms.</p>
-            </div><!-- END .example -->
-
-            <div class="container">
-              <p>This is the standard Oswald module heading with a descriptive sub headline. While this style is only seen with Oswald when it's a heading inside a module, it could be used as the module heading, as well.</p>
-            </div><!-- END .container -->
-
-          </div><!-- END .type-pairing -->
-
-          <div class="type-pairing source-sans-pro-source-sans-pro clearfix">
-
-              <h4><span class="source-sans-pro">Source Sans Pro</span> <span class="source-sans-pro">+ Source Sans Pro</span></h4>
-
-            <div class="example">
-              <p class="source-sans-pro">Source can be a headline, if necessary.</p>
-              <p class="source-sans-pro">The key is making sure font size (and color) preserve hierarchy.</p>
-            </div><!-- END .example -->
-
-            <div class="container">
-              <p>If minor text highlighting or separation needs to occur we can take advantage of the wide faimly of weights Source Sans Pro has.</p>
-            </div><!-- END .container -->
-
-          </div><!-- END .type-pairing -->
-
-        </div><!-- END .section -->
-
-        <div class="section">
-
-          <h2 id="buttons">Buttons</h2>
-
-          <h3>General</h3>
-          <p class="heading-sub">Sticking to a consistent family of buttons will allow for a button to hint at its functionality simply based on the type of button it is.</p>
-
-          <div id="primary-cta">
-            <h3>Primary Call to Action</h3>
-
-            <p class="heading-sub">The standard Crowdtap call to action is a big red button; it's really hard to miss. It's normally as wide as its content unless in its in a modal window, in which case its the same width as the content in the modal.</p>
-
-            <button class="primary-cta"><span>Normal button</span></button>
-            <button class="primary-cta-wide"><span>Wide button</span></button>
-          </div><!-- END #primary-cta -->
-
-          <div id="utility-buttons">
-            <h3>Utility Buttons</h3>
-
-            <p class="heading-sub">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-          </div><!-- END #utility-buttons -->
-
-        </div><!-- END .section -->
-
-        <div class="section">
-          <h2 id="form-elements">Form Elements</h2>
-
-          <h3>General</h3>
-          <p class="heading-sub">These are the common elements used to ensure that our forms appear to be part of the same family.</p>
-
-          <h3>Basic form elements</h3>
-
-          <p class="heading-sub"></p>
-
-          <form class="default-form-elements">
-            <input type="text" />
-
-            <textarea>Type some text here</textarea>
-
-            <select>
-              <option>Option 1</option>
-              <option>Option 2</option>
-            </select>
-
-            <input type="checkbox" />
-          </form>
-
-          <form class="disabled-form-elements">
-            <input type="text" />
-
-            <textarea>Type some text here</textarea>
-
-            <select>
-              <option>Option 1</option>
-              <option>Option 2</option>
-            </select>
-
-            <input type="checkbox" />
-          </form>
-
-        </div><!-- END .section -->
-
-        <div class="section">
-
-          <h2 id="modals">Modals</h2>
-
-          <h3>General</h3>
-          <p class="heading-sub">Modal windows are employed when related content needs to be presented in a focused manner that doesn't take the user away from the page they're on.</p>
-
-          <button class="primary-cta modal-trigger">Show modal</button>
-
-        </div><!-- END .section -->
-
-        <div class="section">
-
-          <h2 id="icons">Icons</h2>
-
-          <h3>General</h3>
-          <p class="heading-sub">For icons, we use the <a href="http://fortawesome.github.com/Font-Awesome/" target="_blank">Font Awesome</a> icon library. <a href="http://fortawesome.github.com/Font-Awesome/design.html" target="_blank">This page</a> has all of the characters, their classes, and character codes.</p>
-
-          <h3 id="icons-global-ui-icons">Global UI Icons</h3>
-          <p class="heading-sub">Icons used in global site areas&mdash;namely the header bar.</p>
-          <ul class="ct-icons">
-            <li><i class="icon-th-list"></i> &ndash; Brand dropdown list.</li>
-            <li><i class="icon-user"></i> &ndash; Profile dropdown list.</li>
-            <li><i class="icon-bell-alt"></i> &ndash; Alerts dropdown list.</li>
-          </ul><!-- END .ct-icons -->
-
-          <h3 id="icons-brand-page-icons">Brand Page Icons</h3>
-          <p class="heading-sub">Icons used on the brand page.</p>
-          <ul class="ct-icons">
-            <li><i class="icon-camera"></i> &ndash; Photo challenge action.</li>
-            <li><i class="icon-comments"></i> &ndash; Discussion action.</li>
-            <li><i class="icon-gift"></i> &ndash; Sample party action.</li>
-            <li><i class="icon-link"></i> &ndash; Web share action.</li>
-          </ul><!-- END .ct-icons -->
-
-          <h3 id="icons-game-icons">Game Icons</h3>
-          <p class="heading-sub">Icons used as part of the game system.</p>
-          <ul class="ct-icons">
-            <li><i class="icon-plus-sign"></i> &ndash; Points earned.</li>
-            <li><i class="icon-circle-arrow-up"></i> &ndash; Level up.</li>
-            <li><i class="icon-star"></i> &ndash; Star award.</li>
-            <li><i class="icon-flag"></i> &ndash; Submission has been flagged.</li>
-            <li><i class="icon-trophy"></i> &ndash; Top award.</li>
-            <li><i class="icon-calendar"></i> &ndash; On 1 year veteran tapper ribbon.</li>
-          </ul><!-- END .ct-icons -->
-
-          <h3 id="icons-action-notification-icons">Action Notification Icons</h3>
-          <p class="heading-sub">Icons used to communicate the stage an action is currently in.</p>
-          <ul class="ct-icons">
-            <li><i class="icon-certificate"></i> &ndash; New actions</li>
-            <li><i class="icon-tasks"></i> &ndash; In progress actions</li>
-            <li><i class="icon-time"></i> &ndash; Expiring actions</li>
-          </ul><!-- END .ct-icons -->
-
-        </div><!-- END .section -->
-
-        <div class="section">
-
-          <h2 id="details">Details and Flourishes</h2>
-          <h3>General</h3>
-          <p class="heading-sub">These are some of the smaller details that help tie elements of the visual system together.</p>
-
-          <h3>Text Shadows</h3>
-          <p class="heading-sub">Text shadow is used to create a "letterpress" effect which helps increase legibility in situations where text is on a background that is noisy&mdash;photos, textures, etc. Text shadows also prevent our text from feeling like it's floating on its background.</p>
-
-          <h3>Box Shadows</h3>
-          <p class="heading-sub">Box shadows are used on modules that sit on the page. Shadows are generally black with low opacity and a small, 3 pixel spread. The shadow is meant to be a subtle detail to further separate containers from the background.</p>
-
-          <h3>Border Radii</h3>
-          <p class="heading-sub">We use a border radius of 3px on anything that has a rounded corner (which ends up being just about everything).</p>
-
-        </div><!-- END .section -->
-      </div><!-- END .main -->
-    </div><!-- END #wrapper -->
+    </div><!-- END #main -->
 
     <script src="js/jquery.min.js"></script>
-    <script src="js/localscroll.min.js"></script>
-    <script src="js/scrollto.min.js"></script>
-    <script src="js/viewport.min.js"></script>
-
     <script>
       $(document).ready(function(){
-
-
-        $('#nav').localScroll({
-          offset: parseInt($('h2').css('margin-top')) * -1
-        });
-
-        var visibleHeadingId;
-
-        $(window).scroll(function() {
-          var visibleHeading = $('div.section:in-viewport')
-                                .find('h2:in-viewport, h3:in-viewport')
-                                .eq(0);
-
-          if(visibleHeading.attr('id') !== undefined) {
-            visibleHeadingId = visibleHeading.attr('id');
-          }
-
-          $('#nav a').each(function() {
-            if($(this).attr('href').slice(1) === visibleHeadingId) {
-              $(this).addClass('selected');
-            } else {
-              $(this).removeClass('selected');
-            }
-          });
-        });
-
-        $('#nav > li > a').click(function() {
-          if(!$(this).hasClass('active')) {
-            $('#nav a').removeClass('active');
-
-            $(this).addClass('active');
-            $(this).siblings('ul').slideDown('fast');
-          }
-        });
-      });
-
-      $('.modal-trigger.primary-cta').click(function() {
-
-        $('body').css('overflow', 'hidden');
-        $('.modal-hidden').addClass('modal-visible').removeClass('modal-hidden');
-        $('.modal-visible').css('height', $(document).height());
-        $('.modal-container').center().css('top', '-=200px');
-
-        event.preventDefault();
-      });
-
-        // Just a lil function to center the modal preview below
-        jQuery.fn.center = function () {
-            this.css("position","absolute");
-            this.css("top", Math.max(0, (($(window).height() - $(this).outerHeight()) / 2) + $(window).scrollTop()) + "px");
-            this.css("left", Math.max(0, (($(window).width() - $(this).outerWidth()) / 2) + $(window).scrollLeft()) + "px");
-            return this;
-        }
-
-      $('.modal-container .primary-cta-wide').click(function() { 
-        $('.icon-remove').click();
-
-        event.preventDefault(); 
-      });
-
-      $('.icon-remove').click(function() {
-        $('body').css('overflow', 'visible');
-        $('.modal-visible').addClass('modal-hidden').removeClass('modal-visible');
       });
     </script>
 
