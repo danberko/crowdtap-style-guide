@@ -202,12 +202,12 @@ body > header {
 }
 
 .color-red-dark {
-  color: #AF182C;
+  color: #AB172B;
 }
 
 .color-red-dark .color-swatch,
 .color-swatch-mini.color-red-dark {
-  background-color: #AF182C;
+  background-color: #AB172B;
 }
 
 .color-blue {
@@ -229,12 +229,12 @@ body > header {
 }
 
 .color-blue-dark {
-  color: #0092b3;
+  color: #0089A8;
 }
 
 .color-blue-dark .color-swatch,
 .color-swatch-mini.color-blue-dark {
-  background-color: #0092b3;
+  background-color: #0089A8;
 }
 
 .color-green {
@@ -256,12 +256,12 @@ body > header {
 }
 
 .color-green-dark {
-  color: #8cd723;
+  color: #83CA21;
 }
 
 .color-green-dark .color-swatch,
 .color-swatch-mini.color-green-dark {
-  background-color: #8cd723;
+  background-color: #83CA21;
 }
 
 .color-pink {
@@ -301,21 +301,21 @@ body > header {
 }
 
 .color-yellow-light {
-  color: #FFD97A;
+  color: #FFDC85;
 }
 
 .color-yellow-light .color-swatch,
 .color-swatch-mini.color-yellow-light {
-  background-color: #FFD97A;
+  background-color: #FFDC85;
 }
 
 .color-yellow-dark {
-  color: #f6b613;
+  color: #F6B309;
 }
 
 .color-yellow-dark .color-swatch,
 .color-swatch-mini.color-yellow-dark {
-  background-color: #f6b613;
+  background-color: #F6B309;
 }
 
 .color-background .color-swatch {
